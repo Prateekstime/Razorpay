@@ -30,7 +30,7 @@ export default function RayAssistant() {
         `}
       >
         {/* Header */}
-        <div className="flex items-start gap-3 mb-6">
+        <div className="flex items-start gap-3 m-2">
           
 
           <div>

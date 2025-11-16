@@ -268,20 +268,12 @@ export default function EnhancedProducts() {
                                                 alt={product.title}
                                                 className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-700"
                                             />
-                                            <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-60 group-hover/card:opacity-40 transition-opacity duration-500`}></div>
+                                            <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-40 group-hover/card:opacity-40 transition-opacity duration-500`}></div>
 
-                                            {/* Badge */}
-                                            {product.badge && (
-                                                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-700">
-                                                    {product.badge}
-                                                </div>
-                                            )}
+                                          
 
-                                            {/* Stats Badge */}
-                                            <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg">
-                                                <div className="text-lg font-bold text-slate-900">{product.stats.value}</div>
-                                                <div className="text-xs text-slate-600">{product.stats.label}</div>
-                                            </div>
+                                           
+                                         
                                         </div>
 
                                         {/* Content */}
@@ -379,7 +371,7 @@ export default function EnhancedProducts() {
                             </div>
 
                             {/* Details */}
-                            <div className="mb-8">
+                            <div className="mb-">
                                 <h4 className="text-2xl font-bold text-slate-900 mb-6">Everything You Need</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                     {selectedProduct.details.map((detail, i) => (
@@ -405,6 +397,7 @@ export default function EnhancedProducts() {
                             </div>
                         </div>
                     </div>
+      
                 </div>
             )}
 

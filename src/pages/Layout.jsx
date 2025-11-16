@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 export default function Layout({children}) {
   return (
     <div className='w-full '>
-        <div className='fixed top-0 z-50 w-full'>
+        <div className='fixed top-0 z-70 w-full'>
 
       <Navbar />
         </div>
