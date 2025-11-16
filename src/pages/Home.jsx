@@ -1,20 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
-import CountClicks from './features/CountCLickes';
-import MemoExample from './features/MemoExample';
+import React from 'react'
+import Hero from '../components/sections/Hero'
+import Products from '../components/sections/Products'
+import StackingCards from '../components/Stacking-Cards'
+import Partners from '../components/sections/Partner'
+import Cta from '../components/sections/Cta'
+import GlobalReach from '../components/sections/GlobalReach'
+import CTAA from '../components/sections/Ctaa'
+import RayAssistant from '../components/RayAsssitant'
 
-export default function Home() {
-    const [data,setData] = useState([]); 
-    const [loading,setLoading] = useState(true); 
-    const [error,setError] = useState(null); 
+const Home = () => {
 
-
-  
-       
   return (
     <div>
-        <h1>Home</h1>
-  
+      <Hero />
+      <Products />
+      <StackingCards />
+      <Partners />
+      <Cta/>
+      <GlobalReach />
+      <CTAA />
+      <div className='fixed bottom-10 z-50 right-10'>
+        <RayAssistant />
+      </div>
     </div>
   )
 }
+
+export default Home

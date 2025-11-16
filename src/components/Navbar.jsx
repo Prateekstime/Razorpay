@@ -107,9 +107,9 @@ export default function Navbar() {
 
 
   return (
-    <nav className="bg-white shadow-sm w-full max-w-[1400px] px-10 py-3 flex items-center justify-between relative">
+    <nav className="bg-white shadow-sm self-center   w-full max-w-[1440px] px-10 py-3 flex items-center justify-between relative ">
       {/* LEFT SECTION */}
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 ">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Razorpay_logo.svg/2560px-Razorpay_logo.svg.png"
           className="w-32"
