@@ -50,12 +50,12 @@ export default function Register() {
         </div>
       </div>
 
-      <div className="absolute right-0 top-10 w-5/12 z-10 flex items-center justify-center px-8">
-        <div className="w-[440px] h-[450px] overflow-scroll scrollbar-hide bg-white rounded-3xl px-10 py-16">
-          <div className="grid gap-6 h-[400px]">
+      <div className="absolute right-0 top-20 w-5/12 z-10 flex items-center justify-center px-8">
+        <div className="w-[440px] h-[370px] overflow-scroll scrollbar-hide bg-white rounded-3xl px-10 py-2">
+          <div className="grid gap-2 h-[400px]">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Razorpay_logo.svg/2560px-Razorpay_logo.svg.png"
-              className="w-32  mb-6"
+              className="w-32  "
               alt="logo-small"
             />
 
@@ -101,7 +101,7 @@ export default function Register() {
              
               {open && (
                 <div
-                  className="absolute top-full left-0 w-full mt-1 border border-gray-200 rounded-lg 
+                  className="absolute top- left-0 w-full mt-1 border border-gray-200 rounded-lg 
       shadow-lg bg-white overflow-hidden z-50 
       animate-dropdown"
                 >

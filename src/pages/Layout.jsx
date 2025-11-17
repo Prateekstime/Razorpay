@@ -14,10 +14,7 @@ export default function Layout({children}) {
       <main>
         {children}
       </main>
-      <div className='relative bottom-0'>
-
-      <Footer />
-      </div>
+     
     </div>
   )
 }

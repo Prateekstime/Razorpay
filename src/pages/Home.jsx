@@ -22,6 +22,10 @@ const Home = () => {
       <div className='fixed bottom-10 z-50 right-10'>
         <RayAssistant />
       </div>
+       <div className='relative bottom-0'>
+
+      <Footer />
+      </div>
     </div>
   )
 }
