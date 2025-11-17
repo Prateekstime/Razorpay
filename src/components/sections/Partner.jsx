@@ -78,13 +78,13 @@ export default function Partners() {
           </p>
         </div>
 
-        {/* Infinite Scroll Container */}
+    
         <div
           ref={scrollRef}
           className="flex gap-8 overflow-x-auto scroll-smooth pb-4 mb-16"
           style={{ scrollBehavior: 'auto', scrollbarWidth: 'none' }}
         >
-          {/* Duplicate partners for infinite effect */}
+       
           {[...partners, ...partners, ...partners].map((partner, index) => (
             <div
               key={index}
@@ -98,7 +98,7 @@ export default function Partners() {
           ))}
         </div>
 
-        {/* Stats */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { value: '150K+', label: 'Businesses' },

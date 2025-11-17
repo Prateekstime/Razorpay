@@ -205,7 +205,7 @@ export default function EnhancedProducts() {
         <>
             <section className="py-24 bg-gradient-to-b from-white via-slate-50 to-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header */}
+                  
                     <div className="text-center mb-16">
                         <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
                             Everything your business needs
@@ -215,7 +215,7 @@ export default function EnhancedProducts() {
                         </p>
                     </div>
 
-                    {/* Category Tabs */}
+                
                     <div className="flex justify-center gap-4 mb-12 flex-wrap">
                         {productCategories.map((category, index) => (
                             <button
@@ -232,9 +232,9 @@ export default function EnhancedProducts() {
                         ))}
                     </div>
 
-                    {/* Products Horizontal Scroll */}
+                  
                     <div className="relative group">
-                        {/* Navigation Buttons */}
+                      
                         <button
                             onClick={() => scroll('left')}
                             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-slate-50 -translate-x-6"
@@ -248,7 +248,7 @@ export default function EnhancedProducts() {
                             <ChevronRight className="w-6 h-6 text-slate-700" />
                         </button>
 
-                        {/* Scrollable Container */}
+                    
                         <div
                             ref={scrollContainerRef}
                             className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory scroll-smooth"
@@ -261,7 +261,7 @@ export default function EnhancedProducts() {
                                     onClick={() => setSelectedProduct(product)}
                                 >
                                     <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full">
-                                        {/* Image with Gradient Overlay */}
+                                       
                                         <div className="relative h-64 overflow-hidden">
                                             <img
                                                 src={product.image}
@@ -276,7 +276,7 @@ export default function EnhancedProducts() {
                                          
                                         </div>
 
-                                        {/* Content */}
+
                                         <div className="p-6">
                                             <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover/card:text-blue-600 transition-colors">
                                                 {product.title}
@@ -285,7 +285,7 @@ export default function EnhancedProducts() {
                                                 {product.description}
                                             </p>
 
-                                            {/* Quick features */}
+                                          
                                             <div className="flex flex-wrap gap-2 mb-4">
                                                 {product.details.slice(0, 3).map((detail, i) => (
                                                     <span key={i} className="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full">
@@ -300,7 +300,7 @@ export default function EnhancedProducts() {
                                             </div>
                                         </div>
 
-                                        {/* Hover Glow */}
+                                       
                                         <div className="absolute inset-0 border-2 border-transparent group-hover/card:border-blue-400 rounded-2xl transition-colors duration-500"></div>
                                     </div>
                                 </div>
@@ -308,7 +308,7 @@ export default function EnhancedProducts() {
                         </div>
                     </div>
 
-                    {/* Get Started CTA */}
+                  
                     <div className="text-center mt-12">
                         <button className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2">
                             Get Started Now
@@ -318,7 +318,7 @@ export default function EnhancedProducts() {
                 </div>
             </section>
 
-            {/* Enhanced Modal */}
+          
             {selectedProduct && (
                 <div
                     className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-md animate-fade-in"
@@ -328,7 +328,7 @@ export default function EnhancedProducts() {
                         className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl animate-scale-in"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {/* Header with Image */}
+                     
                         <div className="relative h-64 overflow-hidden">
                             <img
                                 src={selectedProduct.image}
@@ -355,7 +355,7 @@ export default function EnhancedProducts() {
                         </div>
 
                         <div className="p-8 md:p-12">
-                            {/* Features grid */}
+                         
                             <div className="mb-8">
                                 <h4 className="text-2xl font-bold text-slate-900 mb-6">Key Features</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -370,7 +370,7 @@ export default function EnhancedProducts() {
                                 </div>
                             </div>
 
-                            {/* Details */}
+                          
                             <div className="mb-">
                                 <h4 className="text-2xl font-bold text-slate-900 mb-6">Everything You Need</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -385,7 +385,7 @@ export default function EnhancedProducts() {
                                 </div>
                             </div>
 
-                            {/* CTA buttons */}
+                          
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button className="flex-1 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
                                     Get Started Now

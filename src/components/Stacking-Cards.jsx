@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import RazorpayTabs from "./RazorpayTabs";
+import { useState } from "react";
 
 const stackingData = [
   {
@@ -8,9 +10,9 @@ const stackingData = [
     gradient: "bg-gradient-to-br from-teal-50 to-cyan-100",
     icon: "💳",
     images: [
-      "/payment-gateway-dashboard.jpg",
-      "/payment-button-interface.jpg", 
-      "/payment-links-qr-code.jpg"
+      "../../public/images/stack11.png",
+      "../../public/images/stack12.png", 
+      "../../public/images/stack13.png"
     ],
     imageTitles: [
       "Dashboard View",
@@ -24,9 +26,9 @@ const stackingData = [
     gradient: "bg-gradient-to-br from-cyan-50 to-blue-100",
     icon: "🔘",
     images: [
-      "/payment-button-interface.jpg",
-      "/razorpay-pos-payment-terminal.jpg",
-      "/invoice-management-system.jpg"
+      "../../public/images/stack21.png",
+      "../../public/images/stack23.png",
+      "../../public/images/stack23.png"
     ],
     imageTitles: [
       "Payment Button",
@@ -40,9 +42,9 @@ const stackingData = [
     gradient: "bg-gradient-to-br from-blue-50 to-indigo-100",
     icon: "🔗",
     images: [
-      "/payment-links-qr-code.jpg",
-      "/payment-gateway-dashboard.jpg",
-      "/razorpay-pos-payment-terminal.jpg"
+      "../../public/images/stack31.png",
+      "../../public/images/stack32.png",
+      "../../public/images/stack24.png"
     ],
     imageTitles: [
       "QR Code Generator",
@@ -56,9 +58,9 @@ const stackingData = [
     gradient: "bg-gradient-to-br from-indigo-50 to-purple-100",
     icon: "📱",
     images: [
-      "/razorpay-pos-payment-terminal.jpg",
-      "/payment-button-interface.jpg",
-      "/invoice-management-system.jpg"
+      "../../public/images/stack14.png",
+      "../../public/images/stack41.png",
+      "../../public/images/stack42.png"
     ],
     imageTitles: [
       "POS Hardware",
@@ -66,29 +68,16 @@ const stackingData = [
       "Billing System"
     ]
   },
-  {
-    title: "Get Credit & Loans",
-    color: "from-purple-500 to-pink-500",
-    gradient: "bg-gradient-to-br from-purple-50 to-pink-100",
-    icon: "📄",
-    images: [
-      "/invoice-management-system.jpg",
-      "/payment-gateway-dashboard.jpg",
-      "/payment-links-qr-code.jpg"
-    ],
-    imageTitles: [
-      "Invoice Management",
-      "Payment Tracking",
-      "Quick Payments"
-    ]
-  },
+
 ];
 
 export default function StackingCards() {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
+  const [showTabs, setShowTabs] = useState(false);
+  
 
-  // ⭐ Razorpay-style Easing Functions
+
   const easeOutExpo = (t) => 1 - Math.pow(2, -10 * t);
   const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
   const easeInOutQuad = (t) =>
@@ -112,7 +101,7 @@ export default function StackingCards() {
         Math.min(1, (scrollTop - scrollStart) / (scrollEnd - scrollStart))
       );
 
-      // Apply easing to the main progress (smoother scroll)
+    
       const easedProgress = easeOutExpo(progress);
 
       cardsRef.current.forEach((card, index) => {
@@ -120,7 +109,7 @@ export default function StackingCards() {
 
         const totalCards = stackingData.length;
         
-        // Reverse the index so first card (index 0) starts at the back
+       
         const reversedIndex = totalCards - 1 - index;
 
         let cardProgress = Math.max(
@@ -159,11 +148,15 @@ export default function StackingCards() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
+
+
   return (
     <div className="bg-gradient-to-b from-slate-50 to-white">
       <div
         ref={containerRef}
-        className="relative min-h-[300vh]"
+        className="relative min-h-[200vh]"
         style={{ perspective: "900px" }}
       >
         <div className="absolute -top-0 text-start py- px-20 md:px-40 pointer-events-none">
@@ -173,10 +166,11 @@ export default function StackingCards() {
           </h2>
         </div>
 
-        <div className="sticky top-[400px] h-screen flex items-center justify-center pointer-events-none">
+
+        <div className="sticky top-[400px] sm:top-[500px] lg:top-[600px] h-fit flex items-center justify-center pointer-events-none">
           <div
-            className="w-full max-w-[95%] md:max-w-[85%] lg:max-w-[90%] px-6 relative"
-            style={{ height: "600px" }}
+            className="w-full max-w-[95%] md:max-w-[85%] lg:max-w-[90%] px-6 relative h-[100px] sm:h-[100px]"
+            
           >
             {stackingData.map((item, index) => (
               <div
@@ -184,7 +178,7 @@ export default function StackingCards() {
                 ref={(el) => (cardsRef.current[index] = el)}
                 className={`
                   absolute inset-x-0 mx-auto w-full
-                  h-[380px] md:h-[420px] lg:h-[350px] pb-20
+                  h-[280px] md:h-[320px] lg:h-[350px] pb-20
                   ${item.gradient}
                   rounded-2xl p-8 border-2 border-teal-200 shadow-xl
                   transition-all duration-300 pointer-events-auto cursor-pointer
@@ -203,7 +197,7 @@ export default function StackingCards() {
                 ></div>
 
                 <div className="relative z-10 h-full flex items-center gap-10 ">
-                  {/* First Image */}
+               
                   <div className="hidden md:block w-1/2 sm:w-1/3 h-full group ">
                     <div className="w-full h-full mt-6 sm:mt-10 bg-white rounded-xl overflow-hidden relative">
                       <img
@@ -223,7 +217,7 @@ export default function StackingCards() {
                     </div>
                   </div>
 
-                  {/* Second Image */}
+                 
                   <div className="w-1/2 sm:w-1/3 h-full group">
                     <div className="w-full  h-full bg-white  mt-6 sm:mt-10 rounded-xl p-2 overflow-hidden relative">
                       <img
@@ -243,7 +237,6 @@ export default function StackingCards() {
                     </div>
                   </div>
 
-                  {/* Third Image */}
                   <div className="w-1/2 sm:w-1/3  h-full group">
                     <div className="w-full  h-full bg-white  mt-6 sm:mt-10 rounded-xl overflow-hidden relative">
                       <img

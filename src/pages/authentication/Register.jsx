@@ -77,7 +77,7 @@ export default function Register() {
                 Where is your company registered?
               </label>
 
-              {/* Select Box */}
+              
               <div
                 className={`w-full border rounded-lg px-4 py-2 flex items-center justify-between 
     cursor-pointer transition-all duration-400 bg-white
@@ -98,7 +98,7 @@ export default function Register() {
                 )}
               </div>
 
-              {/* Dropdown Menu - Positioned absolutely */}
+             
               {open && (
                 <div
                   className="absolute top-full left-0 w-full mt-1 border border-gray-200 rounded-lg 

@@ -2,15 +2,18 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import PaymentsDropdown from "./PaymentDropDown";
 import BankDropdown from "./bankingDropdown";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubMenu, setMobileSubMenu] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white shadow-sm w-full px-5 py-3 flex items-center justify-between relative">
-      {/* LEFT SECTION */}
+    
       <div className="flex items-center gap-6">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Razorpay_logo.svg/2560px-Razorpay_logo.svg.png"
@@ -18,9 +21,9 @@ export default function Navbar() {
           alt="Logo"
         />
 
-        {/* DESKTOP MENU */}
+      
         <ul className="hidden lg:flex items-center gap-6 text-[15px] font-medium text-gray-700">
-          {/* PAYMENTS */}
+        
           <li
             className="cursor-pointer hover:text-blue-600 relative"
             onMouseEnter={() => setActiveMenu("payments")}
@@ -32,7 +35,7 @@ export default function Navbar() {
             )}
           </li>
 
-          {/* BANKING */}
+        
           <li
             className="cursor-pointer hover:text-blue-600 relative"
             onMouseEnter={() => setActiveMenu("banking")}
@@ -42,7 +45,6 @@ export default function Navbar() {
             {activeMenu === "banking" && <BankDropdown />}
           </li>
 
-          {/* PAYROLL */}
           <li
             className="cursor-pointer hover:text-blue-600 relative"
             onMouseEnter={() => setActiveMenu("payroll")}
@@ -58,7 +60,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* RIGHT SECTION (DESKTOP) */}
+    
       <div className="hidden lg:flex items-center gap-4">
         <img
           src="https://flagsapi.com/IN/flat/64.png"
@@ -67,11 +69,14 @@ export default function Navbar() {
         />
         <ChevronDown size={18} className="mt-1 text-gray-600" />
 
-        <button className="border border-blue-600 text-blue-600 px-5 py-2 rounded-xl font-medium hover:bg-blue-50">
+        <button
+        onClick={()=>{navigate("/login")}} className="border border-blue-600 text-blue-600 px-5 py-2 rounded-xl font-medium hover:bg-blue-50">
           Login
         </button>
 
-        <button className="bg-blue-600 text-white px-5 py-2 rounded-xl font-medium hover:bg-blue-700">
+        <button
+        onClick={()=>{navigate("/register")}}
+         className="bg-blue-600 text-white px-5 py-2 rounded-xl font-medium hover:bg-blue-700">
           Sign Up →
         </button>
       </div>

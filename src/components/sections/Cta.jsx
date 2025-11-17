@@ -128,7 +128,7 @@ export default function Cta() {
                       isHovered ? "rotate-y-180" : ""
                     }`}
                   >
-                    {/* FRONT */}
+                 
                     <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl">
                       <img
                         src={review.image}
@@ -145,7 +145,7 @@ export default function Cta() {
                       </div>
                     </div>
 
-                    {/* BACK */}
+                   
                     <div className="absolute w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl rotate-y-180 p-8 flex flex-col justify-between">
                       <div>
                         <div className="flex gap-1 mb-4">

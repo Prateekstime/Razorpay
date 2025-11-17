@@ -40,10 +40,10 @@ export default function CTAA() {
 
       <div className="relative w-full max-w-6xl mx-auto p-0 overflow-hidden rounded-xl bg-blue-600 text-white flex flex-col md:flex-row items-center shadow-lg">
 
-      {/* LEFT SIDE */}
+    
       <div className="w-full md:w-1/2 px-10 py-12 relative">
 
-        {/* Slanted Edge */}
+     
         <div className="hidden md:block absolute right-[-40px] top-0 h-full w-[80px] bg-blue-600"
           style={{
             clipPath: "polygon(0 0, 50% 0%, 100% 100%, 0 100%)"
@@ -56,16 +56,16 @@ export default function CTAA() {
           Startup Perks
         </h1>
 
-        {/* Line */}
+      
         <div className="w-24 h-[2px] bg-white/70 mt-4 mb-6"></div>
 
-        {/* Button */}
+   
         <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-50 transition">
           Know More
         </button>
       </div>
 
-      {/* RIGHT SIDE IMAGE */}
+  
       <div className="w-full md:w-1/2 h-64 md:h-full overflow-hidden">
         <img
           src={cta2image}
