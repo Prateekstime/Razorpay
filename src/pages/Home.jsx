@@ -7,6 +7,7 @@ import Cta from '../components/sections/Cta'
 import GlobalReach from '../components/sections/GlobalReach'
 import CTAA from '../components/sections/Ctaa'
 import RayAssistant from '../components/RayAsssitant'
+import Footer from '../components/sections/Footer'
 
 const Home = () => {
 

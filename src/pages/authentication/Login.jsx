@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full min-h-screen flex bg-gray-50 overflow-hidden">
 
@@ -72,13 +75,20 @@ export default function Login() {
               "
             />
 
-            <button className="w-full h-12 bg-blue-600 text-white rounded-xl text-lg font-medium hover:bg-blue-700 transition">
+            <button
+             onClick={()=>{navigate("/")}}
+            
+             className="w-full h-12 bg-blue-600 text-white rounded-xl text-lg font-medium hover:bg-blue-700 transition">
               Continue
             </button>
 
             <div className="text-center text-gray-500">or</div>
 
-            <button className="
+            <button 
+            
+             onClick={()=>{navigate("/")}}
+             className="
+            
               w-full h-12 border border-gray-300 rounded-xl
               flex items-center justify-center gap-3 hover:bg-gray-50 transition
             ">

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Navbar() {
+  
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubMenu, setMobileSubMenu] = useState(null);
@@ -63,6 +64,7 @@ export default function Navbar() {
     
       <div className="hidden lg:flex items-center gap-4">
         <img
+         onClick={()=>{navigate("/")}}
           src="https://flagsapi.com/IN/flat/64.png"
           alt="India"
           className="w-6 h-4 rounded-sm"

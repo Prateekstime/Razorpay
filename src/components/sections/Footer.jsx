@@ -27,8 +27,12 @@ export default function Footer() {
         
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg shadow-blue-500/30" />
-              <span className="font-extrabold text-2xl tracking-wide">Razorpay</span>
+                <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Razorpay_logo.svg/2560px-Razorpay_logo.svg.png"
+          className="w-28"
+          alt="Logo"
+        />
+
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               The world’s most comprehensive payment platform tailored for Indian businesses.  

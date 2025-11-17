@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState({
     code: "IN",
@@ -129,7 +131,9 @@ export default function Register() {
               )}
             </div>
 
-            <button className="w-[360px] h-12 bg-blue-600 text-white rounded-xl text-lg font-medium relative z-10">
+            <button 
+              onClick={()=>{navigate("/")}}
+              className="w-[360px] h-12 bg-blue-600 text-white rounded-xl text-lg font-medium relative z-10">
               Continue
             </button>
 
